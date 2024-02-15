@@ -1,0 +1,20 @@
+import express from "express";
+import userRoute from "../modules/user/user.route";
+import opportunityRoute from "../modules/opportunity/opportunity.route";
+import generalRoute from "../modules/general/general.route";
+import projectRoute from "../modules/project/project.route";
+import adminRoute from "../modules/admin/admin.route";
+import companyRoute from "../modules/company/company.route";
+import eventRoute from "../modules/event/event.route";
+import notificationRoute from "../modules/notification/notification.route";
+
+const router = express.Router();
+router.use("/user", userRoute);
+router.use("/opportunity", opportunityRoute);
+router.use("/event", eventRoute);
+router.use("/general", generalRoute);
+router.use("/project", projectRoute);
+router.use("/admin", adminRoute);
+router.use("/company", companyRoute);
+router.use("/notification", notificationRoute);
+export default router;
